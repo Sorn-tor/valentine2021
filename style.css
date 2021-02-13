@@ -55,7 +55,9 @@ a.show-hint{
     left: 50%;
     bottom: 10%;
     transform: translateX(-50%);
-    background-color: palevioletred;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+    background-color: #cc666e;
+    border-radius: 10px;
     border: none;
     width: 25%;
     min-width: 200px;
@@ -63,7 +65,7 @@ a.show-hint{
 }
 
 #send-email-btn .tap-to-send{
-    font-size: 130%;
+    font-size: 140%;
     font-family: sans-serif;
     letter-spacing: 2px;
     color: aliceblue;
