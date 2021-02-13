@@ -35,8 +35,22 @@ $(function() {
     $('#date-from-feb3').append('<div class="date-text">'+fromFeb3() + ' days since </div>').append("<a href='javascript:void(0);' onclick='ajudaUpload()' class='show-hint'>...</a>")
         .append("<div id='the-hint'><br>3 Feb, 2018.</div>");
 
-    
+    $('#password-submit').on('click', function(){
+        logIn();
+    });
 });
+
+function logIn(){
+    event.preventDefault();
+    let userPassword = $('#input-password').val();
+    let passwordToLogIn = "SomeRandomPassword";
+    if (userPassword == passwordToLogIn){
+        $('#authentication').hide();
+        $('#main-wrapper').show();
+
+    }
+    return false;
+}
 
 function ajudaUpload(){
     console.log('tr');

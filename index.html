@@ -10,14 +10,14 @@
     <title>Happy Valentine 2021</title>
 </head>
 <body>
-    <div class="authentication">
+    <div class="authentication" id="authentication">
         <div class="password-form">
             <label for="input-password" style="margin-bottom: 5px;">Password</label><br>
             <input type="password" class='input-password' id="input-password"><br>
-            <input type="submit" value="Enter" class='password-submit'>
+            <input type="submit" value="Enter" class='password-submit' id='password-submit'>
         </div>
     </div>
-    <div class="main-wrapper">
+    <div class="main-wrapper" id="main-wrapper">
         <div class="backgrond"> <img src="./images/bg.jpg"></div>
         <div class="center main-text-container"><div id="date-from-feb3"></div></div>
         <button onclick="sendEmail();" id="send-email-btn">
