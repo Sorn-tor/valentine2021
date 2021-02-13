@@ -10,12 +10,20 @@
     <title>Happy Valentine 2021</title>
 </head>
 <body>
-    <div class="backgrond"> <img src="./images/bg.jpg"></div>
-    <div class="center main-text-container"><div id="date-from-feb3"></div></div>
-    <button onclick="sendEmail();" id="send-email-btn">
-        <div class="tap-to-send">Tap to Send!</div>
-    </button>
-    
+    <div class="authentication">
+        <div class="password-form">
+            <label for="input-password" style="margin-bottom: 5px;">Password</label><br>
+            <input type="password" class='input-password' id="input-password"><br>
+            <input type="submit" value="Enter" class='password-submit'>
+        </div>
+    </div>
+    <div class="main-wrapper">
+        <div class="backgrond"> <img src="./images/bg.jpg"></div>
+        <div class="center main-text-container"><div id="date-from-feb3"></div></div>
+        <button onclick="sendEmail();" id="send-email-btn">
+            <div class="tap-to-send">Tap to Send!</div>
+        </button>
+    </div>
     <script src="main.js"></script>
 </body>
 </html>

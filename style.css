@@ -1,5 +1,6 @@
 *{
     box-sizing: border-box;
+    font-family: sans-serif;
 }
 body{
     margin: 0;
@@ -17,6 +18,41 @@ body{
 
 }
 
+div.main-wrapper{
+    display: none;
+}
+div.authentication{
+    height: 100vh;
+    width: 100vw;
+    background-color: #f0a6ac;
+}
+.password-form{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.input-password{
+    width: 250px;
+    height: 35px;
+    font-size: 150%;
+    padding: 5px;
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid grey;
+}
+.input-password:focus{
+    outline: none;
+}
+.password-submit{
+    border: none;
+    background-color: aliceblue;
+    color: #f0a6ac;
+    width: 250px;
+    height: 35px;
+    margin-top: 10px;
+    font-size: 120%;
+}
 div.center{
     position: absolute;
     top: 56%;
