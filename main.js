@@ -79,7 +79,7 @@ function sendEmail() {
         },
     ];
     var rani = Math.floor(getRandomArbitary(0,5));
-    let emailToSend = 'sorntan19@gmail.com';
+    let emailToSend = 'panootpanoot@gmail.com';
     console.log(rani);
     Email.send({
         Host : "smtp.gmail.com",
