@@ -44,25 +44,59 @@ function ajudaUpload(){
     $('#the-hint').css('display', 'inline');
     return false;
 }
+
+function getRandomArbitary (min, max) {
+    return Math.random() * (max - min) + min;
+}
+
 function sendEmail() { 
+
+    var sp = [
+        {'title': '#1',
+        'imagePath': 'https://raw.githubusercontent.com/Sorn-tor/valentine2021/master/images/2020lastphoto.jpeg',
+        'imageName': '2020lastphoto.jpeg',
+        'caption': 'ภาพที่ถ่ายตอนอยู่ด้วยกันภาพสุดท้ายปี2020',
+        },
+        {'title': '#2',
+        'imagePath': 'https://raw.githubusercontent.com/Sorn-tor/valentine2021/master/images/2_1.jpeg',
+        'imageName': '2_1.jpeg',
+        'caption': 'รูปแรกในมหาลัย @ศกร',
+        },
+        {'title': '#3',
+        'imagePath': 'https://raw.githubusercontent.com/Sorn-tor/valentine2021/master/images/2_2.jpeg',
+        'imageName': '2_2.jpeg',
+        'caption': '@สวยป๋วน',
+        },
+        {'title': '#4',
+        'imagePath': 'https://raw.githubusercontent.com/Sorn-tor/valentine2021/master/images/birthday.JPG',
+        'imageName': 'birthday.JPG',
+        'caption': 'วันเกิดหมูอ้น 21 กันยา 63 ที่ MK',
+        },
+        {'title': '#5',
+        'imagePath': 'https://raw.githubusercontent.com/Sorn-tor/valentine2021/master/images/firstPanootphoto.JPG',
+        'imageName': 'firstPanootphoto.JPG',
+        'caption': 'นี่คือภาพแรก 55555 ขอป้องมา',
+        },
+    ];
+    var rani = Math.floor(getRandomArbitary(0,5));
+    console.log(rani);
     Email.send({
         Host : "smtp.gmail.com",
         Username : "temp.sorn@gmail.com",
         Password : "ThisMailIsTemporary",
         To : 'sorntan19@gmail.com',
-        From : "love@gmail.com",
-        Subject : "test",
-        Body : "unknown"
-    }).then(
-      message => alert(message)
-    );
-    // Email.send({
-
-    //     To : 'sorntan19@gmail.com',
-    //     From : "nong.tor331@gmail.com",
-    //     Subject : "Test Email",
-    //     Body : "<html><h2>Header</h2><strong>Bold text</strong><br></br><em>Italic</em></html>"
-    //     }).then(
-    //         message => alert("mail sent successfully")
-    //     );
+        From : "love_you@panoot.me",
+        Subject : sp[rani]['title'],
+        Body : sp[rani]['caption'],
+        Attachments: [
+            {
+                name: sp[rani]['imageName'],
+                path: sp[rani]['imagePath'],
+            }
+        ]
+    }).then((message)=>{
+        if (message == 'OK'){
+            alert(message);
+        }
+    });
 } 
