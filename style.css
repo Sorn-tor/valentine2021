@@ -19,8 +19,7 @@ body{
 
 div.center{
     position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
+    top: 60%;
     text-align: center;
 }
 

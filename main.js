@@ -79,12 +79,13 @@ function sendEmail() {
         },
     ];
     var rani = Math.floor(getRandomArbitary(0,5));
+    let emailToSend = 'sorntan19@gmail.com';
     console.log(rani);
     Email.send({
         Host : "smtp.gmail.com",
         Username : "temp.sorn@gmail.com",
         Password : "ThisMailIsTemporary",
-        To : 'sorntan19@gmail.com',
+        To : emailToSend,
         From : "love_you@panoot.me",
         Subject : sp[rani]['title'],
         Body : sp[rani]['caption'],
@@ -96,7 +97,9 @@ function sendEmail() {
         ]
     }).then((message)=>{
         if (message == 'OK'){
-            alert(message);
+            alert('เช็ค email: panootpanoot@gmail.com\n\nกดอีกๆ มี5อัน');
+        }else{
+            alert('บางอย่างผิดพลาด ติดต่อผู้พัฒนา');
         }
     });
 } 
