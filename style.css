@@ -55,4 +55,16 @@ a.show-hint{
     left: 50%;
     bottom: 10%;
     transform: translateX(-50%);
+    background-color: palevioletred;
+    border: none;
+    width: 25%;
+    min-width: 200px;
+    height: 45px;
+}
+
+#send-email-btn .tap-to-send{
+    font-size: 130%;
+    font-family: sans-serif;
+    letter-spacing: 2px;
+    color: aliceblue;
 }

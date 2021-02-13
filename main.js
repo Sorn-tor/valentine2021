@@ -49,7 +49,7 @@ function sendEmail() {
         Host : "smtp.gmail.com",
         Username : "temp.sorn@gmail.com",
         Password : "ThisMailIsTemporary",
-        To : 'panoot.a-a@dome.tu.ac.th',
+        To : 'sorntan19@gmail.com',
         From : "love@gmail.com",
         Subject : "test",
         Body : "unknown"
