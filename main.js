@@ -63,57 +63,36 @@ function getRandomArbitary (min, max) {
     return Math.random() * (max - min) + min;
 }
 
-function sendEmail() { 
+// function sendEmail() { 
 
-    var sp = [
-        {'title': '#1',
-        'imagePath': 'https://raw.githubusercontent.com/Sorn-tor/valentine2021/master/images/2020lastphoto.jpeg',
-        'imageName': '2020lastphoto.jpeg',
-        'caption': 'ภาพที่ถ่ายตอนอยู่ด้วยกันภาพสุดท้ายปี2020',
-        },
-        {'title': '#2',
-        'imagePath': 'https://raw.githubusercontent.com/Sorn-tor/valentine2021/master/images/2_1.jpeg',
-        'imageName': '2_1.jpeg',
-        'caption': 'รูปแรกในมหาลัย @ศกร',
-        },
-        {'title': '#3',
-        'imagePath': 'https://raw.githubusercontent.com/Sorn-tor/valentine2021/master/images/2_2.jpeg',
-        'imageName': '2_2.jpeg',
-        'caption': '@สวยป๋วน',
-        },
-        {'title': '#4',
-        'imagePath': 'https://raw.githubusercontent.com/Sorn-tor/valentine2021/master/images/birthday.JPG',
-        'imageName': 'birthday.JPG',
-        'caption': 'วันเกิดหมูอ้น 21 กันยา 63 ที่ MK',
-        },
-        {'title': '#5',
-        'imagePath': 'https://raw.githubusercontent.com/Sorn-tor/valentine2021/master/images/firstPanootphoto.JPG',
-        'imageName': 'firstPanootphoto.JPG',
-        'caption': 'นี่คือภาพแรก 55555 ขอป้องมา',
-        },
-    ];
-    var rani = Math.floor(getRandomArbitary(0,5));
-    let emailToSend = 'panootpanoot@gmail.com';
-    console.log(rani);
-    Email.send({
-        Host : "smtp.gmail.com",
-        Username : "temp.sorn@gmail.com",
-        Password : "ThisMailIsTemporary",
-        To : emailToSend,
-        From : "love_you@panoot.me",
-        Subject : sp[rani]['title'],
-        Body : sp[rani]['caption'],
-        Attachments: [
-            {
-                name: sp[rani]['imageName'],
-                path: sp[rani]['imagePath'],
-            }
-        ]
-    }).then((message)=>{
-        if (message == 'OK'){
-            alert('เช็ค email: panootpanoot@gmail.com\n\nกดอีกๆ มี5อัน');
-        }else{
-            alert('บางอย่างผิดพลาด ติดต่อผู้พัฒนา');
-        }
-    });
-} 
+//     var sp = [
+//         {'title': '#1',
+//         'imagePath': 'https://raw.githubusercontent.com/Sorn-tor/valentine2021/master/images/2020lastphoto.jpeg',
+//         'imageName': '2020lastphoto.jpeg',
+//         'caption': 'ภาพที่ถ่ายตอนอยู่ด้วยกันภาพสุดท้ายปี2020',
+//         },
+//         {'title': '#2',
+//         'imagePath': 'https://raw.githubusercontent.com/Sorn-tor/valentine2021/master/images/2_1.jpeg',
+//         'imageName': '2_1.jpeg',
+//         'caption': 'รูปแรกในมหาลัย @ศกร',
+//         },
+//         {'title': '#3',
+//         'imagePath': 'https://raw.githubusercontent.com/Sorn-tor/valentine2021/master/images/2_2.jpeg',
+//         'imageName': '2_2.jpeg',
+//         'caption': '@สวยป๋วน',
+//         },
+//         {'title': '#4',
+//         'imagePath': 'https://raw.githubusercontent.com/Sorn-tor/valentine2021/master/images/birthday.JPG',
+//         'imageName': 'birthday.JPG',
+//         'caption': 'วันเกิดหมูอ้น 21 กันยา 63 ที่ MK',
+//         },
+//         {'title': '#5',
+//         'imagePath': 'https://raw.githubusercontent.com/Sorn-tor/valentine2021/master/images/firstPanootphoto.JPG',
+//         'imageName': 'firstPanootphoto.JPG',
+//         'caption': 'นี่คือภาพแรก 55555 ขอป้องมา',
+//         },
+//     ];
+//     var rani = Math.floor(getRandomArbitary(0,5));
+//     let emailToSend = 'panootpanoot@gmail.com';
+//     console.log(rani);
+// } 
